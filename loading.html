@@ -1,63 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Join My Profile</title>
-    <style>
-      body {
-        background-color: #f2f2f2;
-        font-family: Arial, sans-serif;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Profile</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #e7f8d9;
+    }
+    .hero-image {
+      background-image: url("https://ggle.io/pic4");
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+      transition-duration: 2ms;
+    }
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #01b7ff;
+    }
+    .hero-text h1 {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p { color: #00f800;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .hero-text button {
+      padding: 1rem 2rem;
+      font-size: 5.5rem;
+      background-color: #ff07c9;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    .hero-text button:hover {
+      transform: scale(1.1);
+      background-color: #25d302;
+      color: #d400ff;
+    }
+    @media screen and (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 4rem;
       }
-      .loader {
-        border: 8px solid #ccc;
-        border-top: 8px solid #0a81ab;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        animation: spin 2s linear infinite;
-        margin: 0 auto;
-        margin-top: 50px;
+      .hero-text p {
+        font-size: 1.5rem;
       }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+      .hero-text button {
+        font-size: 1.25rem;
       }
-      .logo {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        display: block;
-        margin: 0 auto;
-        margin-top: 50px;
-        border: 8px solid #0a81ab;
-        animation: fadein 2s linear;
-      }
-      @keyframes fadein {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Redirecting, please wait...</h1>
-    <div class="loader"></div>
-    <img class="logo" src="https://ggle.io/5cU2" alt="Logo" />
-    <script>
-      const delayRedirect = (url, delay) => {
-        setTimeout(() => {
-          window.location.href = url;
-        }, delay);
-      };
-      const url = "https://vnvdnv.palatlaldate.com/?utm_source=da57dc555e50572d&s1=191356&s2=1830987&s3=Sweet_Girl&j1=1";
-      const delay = 5000; // 5 seconds
-      delayRedirect(url, delay);
-    </script>
-  </body>
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Hey are you want to sex with me now</h1>
+      <p>For Join free</p>
+      <button onclick="location.href='https://ytube4.netlify.app/4u1'">Click Here</button>
+    </div>
+  </div>
+</body>
 </html>
