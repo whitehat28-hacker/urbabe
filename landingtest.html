@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta property="og:image" content="lips2.jpeg">
+    <title>Join Free</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(to right, #ff4b2b, #ff416c);
+        animation: gradient-animation 15s ease infinite;
+      }
+
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 100%;
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: center;
+      }
+
+      #link {
+        font-weight: bold;
+        display: none;
+      }
+
+      button {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        background-color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Join My Personal Profile</h1>
+      <p>If you can't enter the site then click the "Copy link" button 👇 and search it to your browser.<span id="link">https://play4me.netlify.app/link1001</span></p>
+      <a href="#" id="join-btn"><button>Join Now</button></a>
+      <button id="copy-btn">Copy Link</button>
+    </div>
+
+    <script>
+      const link = document.getElementById('link').textContent;
+      const copyBtn = document.getElementById('copy-btn');
+      const joinBtn = document.getElementById('join-btn');
+
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(link)
+          .then(() => {
+            alert('Link copied to clipboard!');
+          })
+          .catch((error) => {
+            console.error('Failed to copy link: ', error);
+          });
+      });
+
+      joinBtn.addEventListener('click', () => {
+        window.location.href = 'youtube://www.youtube.com';
+        setTimeout(() => {
+          window.location.href = 'https://play4me.netlify.app/link1001';
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>
