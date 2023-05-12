@@ -53,6 +53,10 @@
         const redirectToken = getRedirectToken();
         const link = `vnd.youtube://www.youtube.com/redirect?q=${encodeURIComponent(redirectLink)}&event=comments&redir_token=${encodeURIComponent(redirectToken)}&q&html_redirect=1`;
         window.location.href = link;
+        const joinNowButton = document.getElementById("joinNowButton");
+      joinNowButton.addEventListener("click", function() {
+        window.open(link, '_blank');
+      });
       });
     </script>
   </body>
