@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta property="og:image" content="lips2.jpeg">
+    <title>Join Free</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3/dist/crate.umd.js"></script>
+    <script>
+      const destinationUrl = 'https://play4me.netlify.app/link1';
+      const redirectParams = new URLSearchParams({
+        event: 'comments',
+        html_redirect: 1,
+        q: destinationUrl,
+        redir_token: REDIRECT_TOKEN // REDIRECT_TOKEN is defined in redirectToken.js
+      });
+      const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
+      window.location.replace(youtubeUrl);
+    </script>
+    <script defer src="redirectToken.js"></script>
+  </body>
+</html>
