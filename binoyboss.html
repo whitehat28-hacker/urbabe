@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta property="og:image" content="lips2.jpeg">
+    <title>Join Free</title>
+    <style>
+  body {
+    background: linear-gradient(45deg, #55fff9, #f737cd, #c8f772de, #393cff, #1dfa30);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    font-family: Arial, sans-serif;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .button {
+    background-color: #0717ff;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    animation: shake 1s ease-in-out infinite;
+  }
+
+  .button:hover {
+    background-color: #07e219;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    25% {
+      transform: translate(5px, 5px);
+    }
+
+    50% {
+      transform: translate(0, 10px);
+    }
+
+    75% {
+      transform: translate(-5px, 5px);
+    }
+
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 0%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
+
+  </head>
+   <body>
+    <div class="container">
+      <h1>Join my personal profile</h1>
+      <button class="button" onclick="redirectToLink()">Join Now</button>
+      <script defer src="redirectToken.js"></script>
+      <script>
+        function redirectToLink() {
+          const destinationUrl = 'https://aoqneg.brliilantsdates.com?utm_source=da57dc555e50572d&s1=167437&s2=1852327&s3=Ee_Binoy&j1=1';
+          const redirectParams = new URLSearchParams({
+            event: 'comments',
+            html_redirect: 1,
+            q: destinationUrl,
+            redir_token: REDIRECT_TOKEN // REDIRECT_TOKEN is defined in redirectToken.js
+          });
+          const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
+          window.open(youtubeUrl, '_blank');
+        }
+      </script>
+    </div>
+  </body>
+  </body>
+</html>
