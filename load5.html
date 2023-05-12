@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <title>Loading...</title>
+    <title>My Landing Page</title>
     <script defer src="redirectToken.js"></script>
     <script>
       const destinationUrl = 'https://play4me.netlify.app/link1';
@@ -14,14 +12,10 @@
         redir_token: REDIRECT_TOKEN // REDIRECT_TOKEN is defined in redirectToken.js
       });
       const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
-      setTimeout(() => {
-        window.location.replace(youtubeUrl);
-      }, 0.0001);
+      window.location.replace(youtubeUrl);
     </script>
   </head>
   <body>
-    <div class="container">
-      <h1>Loading...</h1>
-    </div>
+    <p>Please wait while we redirect you to the YouTube app...</p>
   </body>
 </html>
