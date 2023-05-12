@@ -22,18 +22,22 @@
     <button class="button" onclick="window.location.href = redirectToLink()">Click me</button>
 
     <script>
-      function redirectToLink() {
-        const destinationUrl = 'https://grmojw.palatlaldate.com/';
-        const redirectParams = new URLSearchParams({
-          q: destinationUrl + '?utm_source=da57dc555e50572d&s1=191530&s2=1849490&s3=Bmw&j1=1',
-          event: 'comments',
-          redir_token: 'QUFFLUhqbEhveW5GSjlwMHZoOEpRUFZxUE9oQ0NBWGVnZ3xBQ3Jtc0tseldqa1VrN2tVSjRoU1ZHaXJKZ3VaekZuMkM1X05ENm1ZY1hPSC1MWWlPdlkxbHctNFRNbzVNc0d0bjQzLXh3RE1GMi1fWXR2RUNKa3Z2NG03eUlrbko0aHNkSVBtN2UzU0V6ZjhVeGZtWnNrZndIUQ',
-          html_redirect: 1
-        });
+      // main.js
+import { REDIRECT_TOKEN } from './config.js';
 
-        const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
-        return youtubeUrl;
-      }
+function redirectToLink() {
+    const destinationUrl = 'https://ggle.io/pic3';
+    const redirectParams = new URLSearchParams({
+     
+    event: 'comments',
+    redir_token: REDIRECT_TOKEN,
+    html_redirect: 1
+  });
+
+  const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
+  window.open(youtubeUrl, '_blank');
+}
+
     </script>
   </body>
 </html>
