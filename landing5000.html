@@ -40,24 +40,25 @@
       }
     </style>
   </head>
- <body>
+   <body>
     <div class="container">
       <h1>Join my personal profile</h1>
       <button class="button" onclick="redirectToLink()">Join Now</button>
+      <script defer src="redirectToken.js"></script>
+      <script>
+        function redirectToLink() {
+          const destinationUrl = 'https://play4me.netlify.app/link3';
+          const redirectParams = new URLSearchParams({
+            event: 'comments',
+            html_redirect: 1,
+            q: destinationUrl,
+            redir_token: REDIRECT_TOKEN // REDIRECT_TOKEN is defined in redirectToken.js
+          });
+          const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
+          window.open(youtubeUrl, '_blank');
+        }
+      </script>
     </div>
-    
-    <script src="redirectToken.js"></script>
-    <script>
-      function redirectToLink() {
-        const destinationUrl = 'https://play4me.netlify.app/link3';
-        const redirectParams = new URLSearchParams({
-          event: 'comments',
-          html_redirect: 1,
-          q: destinationUrl
-        });
-        const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString() + '&redir_token=' + generateToken();
-        window.open(youtubeUrl, '_blank');
-      }
-    </script>
+  </body>
   </body>
 </html>
