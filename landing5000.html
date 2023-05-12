@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <meta property="og:image" content="lips2.jpeg">
     <title>Join Free</title>
     <style>
       body {
-        background-color: black ;
+        background-color: 7aecec ;
         font-family: Arial, sans-serif;
       }
       .container {
@@ -40,22 +40,22 @@
       }
     </style>
   </head>
-  <body>
+ <body>
     <div class="container">
       <h1>Join my personal profile</h1>
-    <button class="button" onclick="redirectToLink()">Join Now</button>
-
+      <button class="button" onclick="redirectToLink()">Join Now</button>
+    </div>
+    
+    <script src="redirectToken.js"></script>
     <script>
       function redirectToLink() {
         const destinationUrl = 'https://play4me.netlify.app/link3';
         const redirectParams = new URLSearchParams({
           event: 'comments',
-          redir_token: 'QUFFLUhqbDYyVVk4VDlYRXI0d0ZVTERaQlA3YVp1dVBRUXxBQ3Jtc0ttSzVRRW9pZW1pblJtdjZnVXdKSTBVbEw3TWM2d2thQlJDZ0hlLVAydEE4cEIxSXg5TmZXUjlKLVhtcmRxdzdzcHZCSEZZa2NvRWFITlBleU44YXJGR1hvYzFqTThWSUI5S016eklBWFB4UXBJOW0xdw',
           html_redirect: 1,
           q: destinationUrl
         });
-
-        const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
+        const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString() + '&redir_token=' + generateToken();
         window.open(youtubeUrl, '_blank');
       }
     </script>
