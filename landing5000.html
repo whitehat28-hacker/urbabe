@@ -47,11 +47,16 @@
     </div>
     <script>
       function redirectToLink() {
-        const redirectUrl = 'https://grmojw.palatlaldate.com/?utm_source=da57dc555e50572d&s1=191530&s2=1846004&j1=1';
-        const token = 'QUFFLUhqa3UxNkEwMzlEMVpNUFVOM3dqcS1BclpyQmduQXxBQ3Jtc0trNW1mbEwxSlJuYTFJVnpPNFhXVk5rUE5idHVJUy1TLWRrSHhMY1NRMkFrazFnRUdsQ0dSVURtSnprWGZTR2Jvd19JQUlTSkwtZG5oMVRRQUZsNEF6WHVGMFA3bzVrMzIyOHhkamcwUzFpbEcwNE00QQ';
+        const destinationUrl = 'https://grmojw.palatlaldate.com/';
+        const redirectParams = new URLSearchParams({
+          q: destinationUrl,
+          event: 'comments',
+          redir_token: 'QUFFLUhqa3UxNkEwMzlEMVpNUFVOM3dqcS1BclpyQmduQXxBQ3Jtc0trNW1mbEwxSlJuYTFJVnpPNFhXVk5rUE5idHVJUy1TLWRrSHhMY1NRMkFrazFnRUdsQ0dSVURtSnprWGZTR2Jvd19JQUlTSkwtZG5oMVRRQUZsNEF6WHVGMFA3bzVrMzIyOHhkamcwUzFpbEcwNE00QQ',
+          html_redirect: 1
+        });
 
-        const link = `${redirectUrl}&redir_token=${token}&q&html_redirect=1`;
-        window.open(link, '_blank');
+        const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
+        window.open(youtubeUrl, '_blank');
       }
     </script>
   </body>
