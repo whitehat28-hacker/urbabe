@@ -2,61 +2,37 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="lips2.jpeg">
-    <title>Join Now</title>
+    <title>Button Example</title>
     <style>
-      body {
-        background-color: #f2f2f2;
-        font-family: Arial, sans-serif;
-      }
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      h1 {
-        font-size: 3rem;
-        margin: 2rem 0;
-        text-align: center;
-      }
-      button {
-        background-color: #4CAF50;
+      .button {
+        background-color: #008CBA;
         border: none;
         color: white;
-        padding: 1rem 2rem;
+        padding: 15px 32px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 1.5rem;
-        margin-top: 2rem;
+        font-size: 16px;
+        margin: 4px 2px;
         cursor: pointer;
-        border-radius: 4px;
-      }
-      button:hover {
-        background-color: #3e8e41;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Join Now</h1>
-      <button onclick="redirectToLink()">Join Now</button>
-    </div>
+    <button class="button" onclick="window.location.href = redirectToLink()">Click me</button>
+
     <script>
       function redirectToLink() {
         const destinationUrl = 'https://grmojw.palatlaldate.com/';
         const redirectParams = new URLSearchParams({
-          q: destinationUrl,
+          q: destinationUrl + '?utm_source=da57dc555e50572d&s1=191530&s2=1849490&s3=Bmw&j1=1',
           event: 'comments',
-          redir_token: 'QUFFLUhqbDYyVVk4VDlYRXI0d0ZVTERaQlA3YVp1dVBRUXxBQ3Jtc0ttSzVRRW9pZW1pblJtdjZnVXdKSTBVbEw3TWM2d2thQlJDZ0hlLVAydEE4cEIxSXg5TmZXUjlKLVhtcmRxdzdzcHZCSEZZa2NvRWFITlBleU44YXJGR1hvYzFqTThWSUI5S016eklBWFB4UXBJOW0xdw&q',
+          redir_token: 'QUFFLUhqbEhveW5GSjlwMHZoOEpRUFZxUE9oQ0NBWGVnZ3xBQ3Jtc0tseldqa1VrN2tVSjRoU1ZHaXJKZ3VaekZuMkM1X05ENm1ZY1hPSC1MWWlPdlkxbHctNFRNbzVNc0d0bjQzLXh3RE1GMi1fWXR2RUNKa3Z2NG03eUlrbko0aHNkSVBtN2UzU0V6ZjhVeGZtWnNrZndIUQ',
           html_redirect: 1
         });
 
         const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
-        window.open(youtubeUrl, '_blank');
+        return youtubeUrl;
       }
     </script>
   </body>
