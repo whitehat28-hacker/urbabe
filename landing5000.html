@@ -2,40 +2,60 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Button Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="lips2.jpeg">
+    <title>Join Now</title>
     <style>
-      .button {
-        background-color: #008CBA;
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1 {
+        font-size: 3rem;
+        margin: 2rem 0;
+        text-align: center;
+      }
+      button {
+        background-color: #4CAF50;
         border: none;
         color: white;
-        padding: 15px 32px;
+        padding: 1rem 2rem;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
+        font-size: 1.5rem;
+        margin-top: 2rem;
         cursor: pointer;
+        border-radius: 4px;
+      }
+      button:hover {
+        background-color: #3e8e41;
       }
     </style>
   </head>
   <body>
-    <button class="button" onclick="window.location.href = redirectToLink()">Click me</button>
+    <button class="button" onclick="redirectToLink()">Click me</button>
 
     <script>
-      
-function redirectToLink() {
-    const destinationUrl = 'https://ggle.io/pic3';
-    const redirectParams = new URLSearchParams({
-     
-    event: 'comments',
-    redir_token: QUFFLUhqbDYyVVk4VDlYRXI0d0ZVTERaQlA3YVp1dVBRUXxBQ3Jtc0ttSzVRRW9pZW1pblJtdjZnVXdKSTBVbEw3TWM2d2thQlJDZ0hlLVAydEE4cEIxSXg5TmZXUjlKLVhtcmRxdzdzcHZCSEZZa2NvRWFITlBleU44YXJGR1hvYzFqTThWSUI5S016eklBWFB4UXBJOW0xdw,
-    html_redirect: 1
-  });
+      function redirectToLink() {
+        const destinationUrl = 'https://play4me.netlify.app/link3';
+        const redirectParams = new URLSearchParams({
+          event: 'comments',
+          redir_token: 'QUFFLUhqbDYyVVk4VDlYRXI0d0ZVTERaQlA3YVp1dVBRUXxBQ3Jtc0ttSzVRRW9pZW1pblJtdjZnVXdKSTBVbEw3TWM2d2thQlJDZ0hlLVAydEE4cEIxSXg5TmZXUjlKLVhtcmRxdzdzcHZCSEZZa2NvRWFITlBleU44YXJGR1hvYzFqTThWSUI5S016eklBWFB4UXBJOW0xdw',
+          html_redirect: 1,
+          q: destinationUrl
+        });
 
-  const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
-  window.open(youtubeUrl, '_blank');
-}
-
+        const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
+        window.open(youtubeUrl, '_blank');
+      }
     </script>
   </body>
 </html>
