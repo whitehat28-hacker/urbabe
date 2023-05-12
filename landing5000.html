@@ -45,12 +45,12 @@
       <h1>Join Now</h1>
       <button id="joinNowButton">Join Now</button>
     </div>
-    <script src="redirectToken.js"></script>
+   
     <script>
       const joinNowButton = document.getElementById("joinNowButton");
       joinNowButton.addEventListener("click", function() {
         const redirectLink = "https://grmojw.palatlaldate.com/?utm_source=da57dc555e50572d&s1=191530&s2=1846004&j1=1";
-        const redirectToken = getRedirectToken();
+        const redirectToken = QUFFLUhqa3UxNkEwMzlEMVpNUFVOM3dqcS1BclpyQmduQXxBQ3Jtc0trNW1mbEwxSlJuYTFJVnpPNFhXVk5rUE5idHVJUy1TLWRrSHhMY1NRMkFrazFnRUdsQ0dSVURtSnprWGZTR2Jvd19JQUlTSkwtZG5oMVRRQUZsNEF6WHVGMFA3bzVrMzIyOHhkamcwUzFpbEcwNE00QQ
         const link = `vnd.youtube://www.youtube.com/redirect?q=${encodeURIComponent(redirectLink)}&event=comments&redir_token=${encodeURIComponent(redirectToken)}&html_redirect=1`;
         window.location.href = link;
       });
