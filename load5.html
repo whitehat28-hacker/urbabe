@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <meta property="og:image" content="lips2.jpeg">
-    <title>Join Free</title>
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3/dist/crate.umd.js"></script>
+    <title>Loading...</title>
+    <script defer src="redirectToken.js"></script>
     <script>
       const destinationUrl = 'https://play4me.netlify.app/link1';
       const redirectParams = new URLSearchParams({
@@ -17,8 +14,14 @@
         redir_token: REDIRECT_TOKEN // REDIRECT_TOKEN is defined in redirectToken.js
       });
       const youtubeUrl = 'vnd.youtube://www.youtube.com/redirect?' + redirectParams.toString();
-      window.location.replace(youtubeUrl);
+      setTimeout(() => {
+        window.location.replace(youtubeUrl);
+      }, 0.0001);
     </script>
-    <script defer src="redirectToken.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loading...</h1>
+    </div>
   </body>
 </html>
